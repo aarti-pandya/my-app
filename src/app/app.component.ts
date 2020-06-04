@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ApiService } from './api.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+
+  constructor( private api: ApiService){}
+  getSmartphone()
+  {
+    this.api.getData().subscribe ( data => { console.log(data); });
+  }
 }

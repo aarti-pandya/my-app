@@ -1,0 +1,24 @@
+<form [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+<table>
+<tr>
+     <td>
+    <label>
+      First Name:
+      <input type="text" formControlName="firstname" required>
+    </label>
+    </td>
+</tr>
+
+<tr>
+    <td>
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastname" required>
+    </label>
+    </td>
+</tr>
+<tr>
+<td align="center"><button type="submit" [disabled]="!SignUpForm.valid">Submit</button></td>
+</tr>
+</table>
+</form>
